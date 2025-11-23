@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DigiTry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <section id="weatherCard" class="glass-card">
+      <h2 id="cityName">Toronto</h2>
+      <p id="currentWeather" class="big-temp">Loading…</p>
+
+      <div class="hourly-row" id="hourlyRow">
+
+      </div>
+    </section>
+
+    <section id="outfitCard" class="glass-card">
+      <h2>Outfit Generator</h2>
+
+      <select id="occasion" class="input">
+        <option value="casual">Casual</option>
+        <option value="school">School</option>
+        <option value="work">Work</option>
+        <option value="party">Party</option>
+        <option value="formal">Formal</option>
+      </select>
+
+      <button id="generateBtn" class="btn primary">Generate Outfit</button>
+
+      <div id="outfitResult" class="outfit-box hidden">
+        <p id="outfitText"></p>
+        <button id="tryAgainBtn" class="btn">Try Again</button>
+      </div>
+    </section>
+
+    <section id="calendarCard" class="glass-card">
+      <h2>Calendar</h2>
+      <p id="todayText"></p>
+
+      <div id="calendarGrid" class="calendar-grid"></div>
+
+      <button id="openClosetBtn" class="btn primary">Open Closet</button>
+    </section>
+
+  </div>
+
+ <aside id="closetPanel">
+    <div class="panel-header">
+      <h2>Your Closet</h2>
+      <button id="closeCloset" class="close-btn">×</button>
+    </div>
+
+    <div class="panel-content">
+      <h3>Add Item</h3>
+
+      <select id="catInput" class="input">
+        <option value="top">Top</option>
+        <option value="bottom">Bottom</option>
+        <option value="shoes">Shoes</option>
+        <option value="outerwear">Outerwear</option>
+      </select>
+
+      <input id="colorInput" class="input" placeholder="Colour (optional)">
+      <input id="urlInput" class="input" placeholder="Image URL">
+
+      <input id="fileInput" type="file" accept="image/*" class="input">
+
+      <button id="addItemBtn" class="btn primary full">Add Item</button>
+
+      <h3>Your Items</h3>
+      <div id="closetGrid" class="closet-grid"></div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
